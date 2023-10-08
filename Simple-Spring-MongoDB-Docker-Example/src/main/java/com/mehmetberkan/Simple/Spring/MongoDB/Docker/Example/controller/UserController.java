@@ -1,7 +1,7 @@
 package com.mehmetberkan.Simple.Spring.MongoDB.Docker.Example.controller;
 
 import com.mehmetberkan.Simple.Spring.MongoDB.Docker.Example.dto.request.CreateUserRequest;
-import com.mehmetberkan.Simple.Spring.MongoDB.Docker.Example.model.User;
+import com.mehmetberkan.Simple.Spring.MongoDB.Docker.Example.dto.response.UserResponse;
 import com.mehmetberkan.Simple.Spring.MongoDB.Docker.Example.service.UserService;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -24,7 +24,7 @@ public class UserController {
     }
 
     @GetMapping
-    public ResponseEntity<List<User>> getAllUser() {
+    public ResponseEntity<List<UserResponse>> getAllUser() {
         return ResponseEntity.ok(userService.getAllUser());
     }
 }
